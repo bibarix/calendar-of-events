@@ -1,0 +1,202 @@
+#calendar, table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  border-style:solid;
+  border-width:1px;
+  margin:10px;
+  padding:10px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.day {
+  border-style:solid;
+  border-width:1px;
+  margin:10px;
+  padding:10px;
+  font-size: 16px;
+  transition: background-color 0.3s
+}
+
+.day:hover {
+  background-color: #e0f7fa;
+  cursor: pointer;
+}
+
+.today {
+  background-color:palegreen;
+  font-weight: bold;
+  color: #333;
+  border-color: #2e8b57;
+}
+
+.weekend {
+  color:gray;
+}
+
+#event-form-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#event-form-container h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#event-form > div {
+  margin-bottom: 15px;
+}
+
+#event-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+#event-form input[type="text"], #event-form textarea {
+  width: calc(100% - 12px); /* Adjust for padding */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box; /* Important for width calculation */
+  font-size: 16px;
+}
+
+#event-form textarea {
+  min-height: 80px;
+}
+
+#event-form button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#event-form button[type="submit"] {
+  background-color: #5cb85c; /* Green for submit */
+  color: white;
+}
+
+#event-form button[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+#event-form button#clear-button {
+  background-color: #f0ad4e; /* Orange for clear */
+  color: white;
+}
+
+#event-form button#clear-button:hover {
+  background-color: #eea236;
+}
+
+#form-messages {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+#form-messages.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+}
+
+#form-messages.error {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+
+/* Clock styling */
+#clock-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  border: 3px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clock-hand {
+  position: absolute;
+  transform-origin: bottom center;
+  background-color: #333;
+  border-radius: 10px;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+}
+
+.hour-hand {
+  width: 4px;
+  height: 35px;
+  background-color: #333;
+}
+
+.minute-hand {
+  width: 3px;
+  height: 50px;
+  background-color: #555;
+}
+
+.second-hand {
+  width: 2px;
+  height: 60px;
+  background-color: #f00;
+}
+
+.clock-center {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-marking {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: #333;
+  top: 5px;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%);
+}
+
+/* Bootstrap Modal customization */
+.modal-header {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.modal-footer {
+  border-top: 1px solid #e9ecef;
+  padding: 15px;
+}
