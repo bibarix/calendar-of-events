@@ -1,4 +1,4 @@
-#calendar, table {
+ #calendar, table {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -92,7 +92,7 @@ th {
 }
 
 #event-form button[type="submit"] {
-  background-color: #5cb85c; /* Green for submit */
+  background-color: #5cb85c; 
   color: white;
 }
 
@@ -101,7 +101,7 @@ th {
 }
 
 #event-form button#clear-button {
-  background-color: #f0ad4e; /* Orange for clear */
+  background-color: #f0ad4e; 
   color: white;
 }
 
@@ -128,7 +128,7 @@ th {
   border: 1px solid #ebccd1;
 }
 
-/* Clock styling */
+/* ------------------------------------------Analog Clock styling--------------------------------------- */
 #clock-container {
   width: 150px;
   height: 150px;
@@ -190,7 +190,7 @@ th {
   transform: translateX(-50%);
 }
 
-/* Bootstrap Modal customization */
+/* --------------------------------------Bootstrap Modal customization------------------------------------------ */
 .modal-header {
   background-color: #4CAF50;
   color: white;
