@@ -1,4 +1,4 @@
-// I'm wrapping the entire script in $(document).ready() to ensure the DOM is fully loaded before my jQuery code runs.
+ // I'm wrapping the entire script in $(document).ready() to ensure the DOM is fully loaded before my jQuery code runs.
 $(document).ready(function() {
   // declare an object Calendar
   function Calendar(elem) {
@@ -337,25 +337,25 @@ function initClock() {
   clockCenter.className = 'clock-center';
   clockContainer.appendChild(clockCenter);
   
-  // I update the clock hands based on the current time
-  function updateClock() {
-    const now = new Date();
-    const hours = now.getHours(); // Make sure to use the 24-hour value directly
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
-    
-    // Calculate rotation angles for the clock hands
-    const hourRotation = ((hours % 12) * 30) + (minutes * 0.5); // 30 degrees per hour, plus a bit for minutes
-    const minuteRotation = minutes * 6; // 6 degrees per minute
-    const secondRotation = seconds * 6; // 6 degrees per second
-    
-    // Apply rotations
-    hourHand.style.transform = `translateX(-50%) rotate(${hourRotation}deg)`;
-    minuteHand.style.transform = `translateX(-50%) rotate(${minuteRotation}deg)`;
-    secondHand.style.transform = `translateX(-50%) rotate(${secondRotation}deg)`;
-    
-    // Update day progress bar with the 24-hour time
-    updateDayProgress(hours, minutes, seconds);
+  // I update the clock hands according to the current time
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours(); // I use the 24-hour format directly
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  
+  // I calculate the rotation angles for each hand of the clock
+  const hourRotation = ((hours % 12) * 30) + (minutes * 0.5); // 30 degrees per hour, plus a bit for minutes
+  const minuteRotation = minutes * 6; // 6 degrees per minute
+  const secondRotation = seconds * 6; // 6 degrees per second
+  
+  // I apply the calculated rotations to the clock hands
+  hourHand.style.transform = `translateX(-50%) rotate(${hourRotation}deg)`;
+  minuteHand.style.transform = `translateX(-50%) rotate(${minuteRotation}deg)`;
+  secondHand.style.transform = `translateX(-50%) rotate(${secondRotation}deg)`;
+  
+  // I update the day progress bar using the current 24-hour time
+  updateDayProgress(hours, minutes, seconds);
 }
   
   // I do the initial clock update
